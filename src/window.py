@@ -24,3 +24,6 @@ class Window:
     def draw_line(self, line, fill_color):
         line.draw(self.__canvas, fill_color)
 
+    def draw_cell(self, cell, wall_color):
+        cell.draw(self.__canvas, wall_color)
+
