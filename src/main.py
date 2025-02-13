@@ -4,7 +4,10 @@ from maze import Maze
 def main():
     win = Window(800, 600)
 
-    maze = Maze(20, 20, 2, 10, 50, 50, win)
+    #maze = Maze(20, 20, 2, 10, 50, 50, win)
+    num_cols = 12
+    num_rows = 10
+    m1 = Maze(0, 0, num_rows, num_cols, 10, 10, win)
 
     win.wait_for_close()
 
