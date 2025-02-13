@@ -1,3 +1,4 @@
+import time
 from cell import Cell
 
 class Maze:
@@ -23,10 +24,8 @@ class Maze:
 
     def _create_cells(self):
         for i in range(0, self.__num_rows):
-            print(f'ROW:  {i}')
             row = []
             for j in range(0, self.__num_cols):
-                print(f'ROW:  {i}   COL:  {j}')
                 row.append(Cell(self.__win))
             self.__cells.append(row)
         for i in range(0, self.__num_rows):
@@ -39,3 +38,8 @@ class Maze:
         x2 = x1 + self.__cell_size_x
         y2 = y1 + self.__cell_size_y
         self.__cells[i][j].draw(x1, y1, x2, y2)
+        self._animate()
+
+    def _animate(self):
+        self.__win.redraw()
+        time.sleep(.1)
