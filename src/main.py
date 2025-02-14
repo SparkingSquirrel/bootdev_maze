@@ -9,6 +9,8 @@ def main():
     num_rows = 10
     m1 = Maze(10, 10, num_rows, num_cols, 20, 20, win)
 
+    m1.solve()
+
     win.wait_for_close()
 
 
