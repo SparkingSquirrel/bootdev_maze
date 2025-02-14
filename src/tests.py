@@ -15,6 +15,10 @@ class Tests(unittest.TestCase):
             num_rows,
         )
 
+        self.assertFalse(
+            m1._cells[0][0].visited
+        )
+
     def test_maze_create_cells_large(self):
         num_cols = 16
         num_rows = 12
